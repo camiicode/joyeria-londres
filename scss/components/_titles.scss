@@ -1,0 +1,31 @@
+.jl {
+  &-section-title {
+    width: 100%;
+    text-align: center;
+  }
+  &-highlight-title {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+    text-align: center;
+    color: var(--jl-primary-color);
+    position: relative;
+    text-shadow: 0px 0px 2px rgba(0,0,0,.5);
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 999; // Aseguramos que el z-index del título sea superior a 0
+    display: unset;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 65%;
+      left: -25px;
+      transform: translateY(-50%);
+      width: calc(100% + 50px);
+      height: 1px;
+      background-color: var(--jl-primary-color);
+      z-index: -1; // Aseguramos que el z-index del pseudo-elemento sea inferior
+    }
+  }
+}

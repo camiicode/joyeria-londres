@@ -1,0 +1,545 @@
+#jl-aboutus-intro {
+  height: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  transition: background-image 1s all;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  @include mq( phone-xl, max) {
+    background-size: cover;
+  }
+
+  .jl {
+
+    &-container {
+      width: auto;  
+      max-width: 1280px;
+      margin: 0 auto;
+      @include mq( phone-xl, max) {
+        max-width: 96%;
+      }
+      &-intro {
+        padding: 0rem 5rem;
+        @include mq( phone-xl, max) {
+          padding: 0 2rem;
+        }
+      }
+    }
+
+    &-row {
+      display: flex;
+
+      &-intro {
+        justify-content: center;
+        align-items: flex-start;
+        @include mq( phone-xl, max) {
+          flex-direction: column;
+        }
+      }
+    }
+
+    &-col {
+      &-intro {
+        width: 30%;
+        @include mq( phone-xl, max) {
+          width: 96%;
+        }
+      }
+      &-hoverImage {
+        width: 70%;
+        @include mq( phone-xl, max) {
+          width: 96%;
+        }
+      }
+      &-intro-floatBox {
+        width: auto;
+        max-width: 100%;
+        h1 {
+          font-size: 3rem;
+          font-weight: bolder;
+          color: #ffffff;
+        }
+        h1, p {
+          margin-bottom: 1rem;
+          color: #ffffff;
+        }
+      }
+    }
+
+    &-hoverImage-caption {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+
+      picture {
+        display: block;
+        margin: 1rem;
+        padding: .75rem .75rem 0 .75rem;
+        background-image: url("../../assets/img/aboutus/border-oldPhoto.png");
+        background-size: 100%;
+        height: 240px;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: pointer;
+        @include mq( phone-xl, max) {
+          background-size: 100% 80%;
+          background-repeat: no-repeat;
+        }
+        &:nth-child(0n+1) { transform: rotate(5deg); }
+        &:nth-child(0n+2) { transform: rotate(-3deg); }
+        &:nth-child(0n+3) { transform: rotate(7deg); }
+
+        &:hover {
+         transform: rotate(0deg);
+          transition: ease .5s all;
+        }
+
+        img {
+          margin: auto;
+          width: auto;
+          max-width: 300px;
+          height: 215px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          @include mq( phone-xl, max) {
+            height: auto;
+            max-height: 200px;
+            width: auto;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    &-col-itemTimeline {
+      width: calc(500vh / 2.5);
+      margin: 0 auto;
+      position: relative;
+      img {
+        width: 400px;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+#jl-aboutus-timeline {
+  height: auto;
+  padding: 0 !important;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  &.active::before {
+    opacity: 1;
+  }    
+
+  .jl-timeline-preload {
+    display: none;
+    background-image: url('./assets/img/aboutus/timeline-01.jpg');
+    background-image: url('./assets/img/aboutus/timeline-02.jpg');
+    background-image: url('./assets/img/aboutus/timeline-03.jpg');
+    background-image: url('./assets/img/aboutus/timeline-04.jpg');
+    background-image: url('./assets/img/aboutus/timeline-05.jpg');
+    background-image: url('./assets/img/aboutus/timeline-06.jpg');
+    background-image: url('./assets/img/aboutus/timeline-07.jpg');
+  }
+
+  section {
+    height: auto !important;
+  }
+
+  .jl {
+
+    &-container {
+      overflow: unset;
+    }
+    
+    &-row {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      @include mq( phone-xl, max) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &-col {
+
+      &-title {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+        width: auto;
+        max-width: 25%;
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        height: 300px;
+        @include mq( phone-xl, max) {
+          max-width: 100%;
+        }
+
+        h1 {
+          font-size: 5rem;
+          line-height: 5rem;
+          color: var(--jl-primary-color);
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+        h2 {
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+          color: var(--jl-light-color);
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+      }
+
+      &-timeline {
+        top: 0;
+        left: 40%;
+        bottom: 0;
+        width: 100px;
+        @include mq( phone-xl, max) {
+          left: 0;
+          width: 20%;
+        }
+        // background-color: red;
+
+        ul {
+          // list-style: none;
+
+          li {
+            position: relative;
+            height: auto;
+
+            &:first-child { 
+              padding-top: 10rem;
+              @include mq( phone-xl, max) {
+                padding-top: 0rem;
+              }
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: -50px;
+              width: 2px;
+              height: 100%;
+              background-color: #fff;
+            }
+
+            &::marker {
+              font-size: 5rem;
+              line-height: 5rem;
+            }
+
+            time {
+              font-size: 3rem;
+              font-weight: 800;
+              color: rgba(255,255,255,.25);
+              @include mq( phone-xl, max) {
+                font-size: 1.5rem;
+                position: absolute;
+                top: 4%;
+              }
+            }
+
+          }
+        }
+
+      }
+
+      &-description {
+        width: 30vw;
+        // background-color: fuchsia;
+        @include mq( phone-xl, max) {
+          width: 50%;
+        }
+
+        .jl {
+
+          &-content {
+            padding-top: 2rem;
+            min-height: 50vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+
+            &:first-child { 
+              margin-top: 10rem;
+            }
+
+            @include mq( phone-xl, max) {
+              &:first-child { 
+                margin-top: 0rem;
+                padding-top: 0rem;
+              }
+            }
+
+            &-box {
+              h2, p {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+          
+          &-content-notDisplay {
+            display: none;
+          }
+        }
+      }
+    }
+    
+    &-timeline-list__item {
+      time { 
+        color: rgba(255,255,255,.5); 
+        transition: ease-in-out .3s all;
+      }        
+      &.jl-timeline-list__item--active time {
+        color: #fff;
+        font-size: 5rem;
+        @include mq( phone-xl, max) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+  }
+}
+
+#jl-aboutus-map {
+
+  iframe {
+    width: 100%;
+    height: auto;
+    min-height: 50vh;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+    @include mq( phone-xl, max) {
+      min-height: 80vh;
+    }
+  }
+
+  .jl {
+
+    &-row {
+      padding: 5rem 0;
+    }
+
+    &-map {
+      &-title {
+        text-align: center;
+        h2 {
+          font-size: 3rem;
+          line-height: 3rem;
+          margin-top: 0;
+          margin-bottom: 2rem;
+          font-family: "Playfair Display";
+          font-weight: 400;
+          color: $primary-color;
+        }
+      }
+      &-description {
+        width: 75%;
+        margin: auto;
+        text-align: center;
+        @include mq( phone-xl, max) {
+          width: 100%;
+          text-align: left;
+        }
+        p {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          margin-top: 0;
+          margin-bottom: 2rem;
+          font-family: "Playfair Display";
+          font-weight: 400;
+          margin: 2rem;
+          @include mq( phone-xl, max) {
+            margin: 2rem 0;            
+          }
+        }
+      }
+      &-iframe {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        &__overlay {
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          bottom: 30px;
+          width: auto;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          @include mq( phone-xl, max) {
+            position: unset;
+          }
+          &--item {
+            width: 325px;
+            padding: 20px 30px;
+            border-radius: 15px;
+            background-color: rgba($primary-color, .75);
+            border-width: 2px;
+            border-color: #fff;
+            margin: 1rem 0;
+            box-shadow: 0px 0px 10px rgba($secondary-color, .5);
+            @include mq( phone-xl, max) {
+              width: auto;
+              max-width: 80%;
+            }
+            cursor: pointer;
+            summary, a {
+              text-transform: uppercase;
+              font-weight: 800;
+              white-space: nowrap;
+              outline: 0px;
+              @include mq( phone-xl, max) {
+                white-space: unset;            
+              }
+            }
+            &-content {
+              padding-top: 1rem;
+              transition: ease .5s all;
+              a {
+                margin-top: 1rem;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#jl-aboutus-reviews {
+  background-color: $tertiary-color;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  .jl {
+    &-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      flex-wrap: wrap;
+    }
+    &-intro {
+      width: 100%;
+      h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+        color: $primary-color;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: "Playfair Display";
+      }
+      h4 {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        color: $secondary-color;
+        margin-top: 0.5rem;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+      p {
+        width: auto;
+        max-width: 65%;
+        margin: auto;
+        font-size: 1rem;
+        line-height: 1rem;
+        color: rgba($secondary-color, .5);
+        margin-top: 1rem;
+        @include mq( phone-xl, max) {
+          max-width: 100%; 
+          text-align: justify;
+        }
+      }
+    }
+    &-col {
+      width: 30%;
+      margin-top: 2rem;
+      padding: .5rem;
+      @include mq( phone-xl, max) {
+        width: 100%;   
+      }
+    }
+    &-content-user {
+      text-align: center;
+      &__image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: auto;
+        overflow: hidden;
+        border: 2px solid $primary-color;
+        box-shadow: 0px 0px 5px rgba(0,0,0,.75);
+        img {
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      &__name p {
+        text-transform: capitalize;
+        color: $secondary-color;
+        margin-top: 0.5rem;
+        font-weight: 400;
+      }
+      &__score {
+        color: $primary-color;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
+      &__review p {
+        @extend %review-text-p;
+        height: 65px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    &-outro {
+      p {
+        color: var(--jl-secondary-color);
+        opacity: .5;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1rem;
+      }
+    }
+  }
+}
