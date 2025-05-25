@@ -1,0 +1,79 @@
+---
+import MegamenuJoyeria from "../megamenu/MegamenuJoyeria.astro";
+import MegamenuMatrimonio from "../megamenu/MegamenuMatrimonio.astro"
+import MegamenuRelojeria from "../megamenu/MegamenuRelojeria.astro";
+import MegamenuAccesorios from "../megamenu/MegamenuAccesorios.astro";
+import MegamenuServicios from "../megamenu/MegamenuServicios.astro";
+import MegamenuEducacion from "../megamenu/MegamenuEducacion.astro";
+---
+
+<nav role="navigation" dir="ltr" class="d-block shadow-md d-flex justify-between items-center relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center" style="position: static !important;">
+        <ul class="d-flex justify-content-between list-unstyled mb-0">
+          <li class="jl-megamenu-item">
+            <a href="#" class="inline-block py-[20px]">
+              <span class="uppercase font-bold hover:jl-text-primary transition">Joyeria</span>
+            </a>
+            <div class="jl-megamenu-content absolute z-10 left-0 right-0">
+              <MegamenuJoyeria />
+            </div>
+          </li>
+          <li class="jl-megamenu-item">
+            <a href="#" class="inline-block py-[20px]">
+              <span class="uppercase font-bold hover:text-amber-500 transition">Matrimonio</span>
+            </a>
+            <div class="jl-megamenu-content absolute z-10 left-0 right-0">
+              <MegamenuMatrimonio />
+            </div>
+          </li>
+          <li class="jl-megamenu-item">
+            <a href="#" class="inline-block py-[20px]">
+              <span class="uppercase font-bold hover:text-amber-500 transition">Relojeria</span>
+            </a>
+            <div class="jl-megamenu-content absolute z-10 left-0 right-0">
+              <MegamenuRelojeria />
+            </div>
+          </li>
+          <li class="jl-megamenu-item">
+            <a href="#" class="inline-block py-[20px]">
+              <span class="uppercase font-bold hover:text-amber-500 transition">Accesorios</span>
+            </a>
+            <div class="jl-megamenu-content absolute z-10 left-0 right-0">
+              <MegamenuAccesorios />
+            </div>
+          </li>
+          <li class="jl-megamenu-item">
+            <a href="#" class="inline-block py-[20px]">
+              <span class="uppercase font-bold hover:text-amber-500 transition">Servicios</span>
+            </a>
+            <div class="jl-megamenu-content absolute z-10 left-0 right-0">
+              <MegamenuServicios />
+            </div>
+          </li>
+          <li class="jl-megamenu-item">
+            <a href="/educacion" class="inline-block py-[20px]">
+              <span class="uppercase font-bold hover:text-amber-500 transition">Educación</span>
+            </a>
+            <div class="jl-megamenu-content absolute z-10 left-0 right-0">
+              <MegamenuEducacion />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style lang="scss">
+  .jl-megamenu-item a:hover span {
+    color: var(--jl-primary-color);
+  }
+  .jl-megamenu-item:hover .jl-megamenu-content {
+    display: block;
+  }
+  .jl-megamenu-content {
+    display: none;
+  }
+</style>

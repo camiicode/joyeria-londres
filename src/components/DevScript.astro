@@ -1,0 +1,19 @@
+---
+const isDev = import.meta.env.DEV;
+---
+
+{isDev && (
+  <script is:inline>
+    // Script que solo se ejecuta en desarrollo local
+    document.addEventListener('DOMContentLoaded', () => {
+      // Verificar todas las URLs que comienzan con /web
+      const allLinks = document.querySelectorAll('a[href^="/web"]');
+      
+      allLinks.forEach(link => {
+        const originalHref = link.getAttribute('href');
+        link.setAttribute('href', `https://joyerialondres.com${originalHref}`);
+        console.log(`Modified link: ${originalHref} -> https://joyerialondres.com${originalHref}`);
+      });
+    });
+  </script>
+)}
