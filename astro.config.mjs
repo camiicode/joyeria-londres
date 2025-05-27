@@ -6,6 +6,17 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    build: {
+      minify: false,
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/styles.css',
+        },
+      },
+    },
+    css: {
+      devSourcemap: true
+    }
   }
 });
