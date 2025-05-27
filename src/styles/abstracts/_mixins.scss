@@ -1,0 +1,20 @@
+// Mixin para generar clases de fondo y texto
+@use "variables";
+
+@mixin jl-generate-color-classes($prefix, $type) {
+  .#{$prefix}-primary {
+    #{$type}: var(--jl-primary-color);
+  }
+  .#{$prefix}-secondary {
+    #{$type}: var(--jl-secondary-color);
+  }
+  .#{$prefix}-tertiary {
+    #{$type}: var(--jl-tertiary-color);
+  }
+}
+
+// Generar clases de fondo
+@include jl-generate-color-classes("jl-bg", "background-color");
+
+// Generar clases de texto
+@include jl-generate-color-classes("jl-text", "color");

@@ -1,11 +1,15 @@
 ---
-import Jumbotron from '../components/main/JewelryEdu/Jumbotron.astro';
+// Layout
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Components
+import Jumbotron from '../components/main/educacion/Jumbotron.astro';
+import Introduccion from '../components/main/educacion/Introduccion.astro';
+import Articulos from '../components/main/educacion/Articulos.astro';
 ---
 
 <Layout>
-	<h1>Educacion</h1>
+	<Jumbotron />
+	<Introduccion />
+	<Articulos />
 </Layout>
