@@ -1,19 +1,68 @@
----
-const isDev = import.meta.env.DEV;
----
-
-{isDev && (
-  <script is:inline>
-    // Script que solo se ejecuta en desarrollo local
-    document.addEventListener('DOMContentLoaded', () => {
-      // Verificar todas las URLs que comienzan con /web
-      const allLinks = document.querySelectorAll('a[href^="/web"]');
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', function() {
+    // Obtiene todas las imágenes, videos y links en la página
+    var images = document.getElementsByTagName('img');
+    var videos = document.getElementsByTagName('source');
+    var links = document.getElementsByTagName('a');
+    
+    // Recorre cada imagen y modifica su atributo src
+    for (var i = 0; i < images.length; i++) {
+      var imgSrc = images[i].getAttribute('src');
       
-      allLinks.forEach(link => {
-        const originalHref = link.getAttribute('href');
-        link.setAttribute('href', `https://joyerialondres.com${originalHref}`);
-        console.log(`Modified link: ${originalHref} -> https://joyerialondres.com${originalHref}`);
-      });
+      // Verifica si la ruta de la imagen comienza con "/web"
+      if (imgSrc.startsWith('/web')) {
+        // Agrega el dominio al inicio de la ruta de la imagen
+        var domain = 'https://joyerialondres.com';
+        images[i].setAttribute('src', domain + imgSrc);
+      }
+    }
+    
+    // Recorre cada video y modifica su atributo src
+    for (var j = 0; j < videos.length; j++) {
+      // Obtén el atributo src del video
+      var videoSrc = videos[j].getAttribute('src');
+      
+      // Verifica si el atributo src no es nulo y comienza con "/web"
+      if (videoSrc && videoSrc.startsWith && videoSrc.startsWith('/web')) {
+        // Agrega el dominio al inicio de la ruta del video
+        var domain = 'https://joyerialondres.com';
+        videos[j].setAttribute('src', domain + videoSrc);
+      }
+    }
+    
+    // Recorre cada enlace <a> y modifica su atributo href
+    for (var k = 0; k < links.length; k++) {
+      var linkHref = links[k].getAttribute('href');
+      
+      // Verifica si la ruta del enlace comienza con "/web"
+      if (linkHref.startsWith('/web')) {
+        // Agrega el dominio al inicio de la ruta del enlace
+        var domain = 'https://joyerialondres.com';
+        links[k].setAttribute('href', domain + linkHref);
+      }
+    }
+  });
+</script>
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', function () {
+    var domain = 'https://joyerialondres.com';
+
+    // Selecciona todos los elementos del DOM
+    var allElements = document.querySelectorAll('*');
+
+    allElements.forEach(function (el) {
+      var classAttr = el.getAttribute('class');
+      if (classAttr) {
+        // Busca coincidencias con bg-[url(/web/....)]
+        var updatedClass = classAttr.replace(/bg-\[url\((\/web[^)]+)\)\]/g, function (match, p1) {
+          return 'bg-[url(' + domain + p1 + ')]';
+        });
+
+        // Solo actualiza si hubo cambios
+        if (updatedClass !== classAttr) {
+          el.setAttribute('class', updatedClass);
+        }
+      }
     });
-  </script>
-)}
+  });
+</script>
