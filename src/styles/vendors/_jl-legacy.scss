@@ -1,5 +1,3 @@
-
-
 #jl-aboutus-reviews .jl-content-user__review p {
   width: auto;
   max-width: 65%;
@@ -1861,3 +1859,10 @@ p.alert.alert-warning {
 main {
   min-height: auto !important
 }
+
+.navbar .o_menu_loading .nav-item {
+  height: auto !important;
+  overflow: visible !important; 
+  opacity: 1 !important;
+}
+
