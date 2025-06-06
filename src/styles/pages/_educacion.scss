@@ -1,0 +1,83 @@
+.jl-edu-jumbotron {
+  &__thumbnails {
+
+    &--item {
+      height: 300px;
+    }
+
+    &--icon {
+      margin-left: -25px;
+      width: auto;
+      height: 100%;
+    }
+
+    &--content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+    }
+  }
+}
+
+.jl-edu-articles {
+  &__pills {
+    background-color: var(--jl-tertiary-color);
+    position: absolute;
+    top: .5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--jl-primary-color);
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+    
+    @media screen and (min-width: 992px) {
+      width: auto !important;
+    }
+
+    li {
+      width: calc(100% / 3);
+
+      a {
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 3rem;
+        align-items: center;
+
+        &::before {
+          content: ""; 
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%);
+
+        }
+
+        svg { fill: var(--jl-primary-color); }
+        span { color: var(--jl-primary-color); }
+        
+        &.active {
+          background-color: var(--jl-primary-color) !important;
+          color: var(--jl-tertiary-color);
+          position: relative;
+
+          
+          svg { fill: var(--jl-tertiary-color); }
+          span { color: var(--jl-tertiary-color); }
+        }
+      }
+    }
+  }
+
+  &__tabContent {
+    border-color: var(--jl-primary-color);
+  }
+}

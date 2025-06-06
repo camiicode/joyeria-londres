@@ -1,0 +1,7 @@
+.row {
+  margin-right: 0 !important;
+
+  @media screen and (min-width: 992px) {
+    margin-right: 15px;
+  }
+}
