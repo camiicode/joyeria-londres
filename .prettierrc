@@ -1,0 +1,8 @@
+{
+  "printWidth": 1200,
+  "htmlWhitespaceSensitivity": "ignore",
+  "astroAllowShorthand": true,
+  "astroSortOrder": "attributes-then-children",
+  "bracketSameLine": true,
+  "singleAttributePerLine": false
+}

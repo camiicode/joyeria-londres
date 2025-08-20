@@ -1,0 +1,44 @@
+<xpath expr="//div[hasclass('camiicode-product-view__carousel')]" position="after">
+  <div class="camiicode-custom-content">
+    <div class="camiicode-custom-content__img">
+      <h2 class="jl-text-primary">Nuestros Metodos de Pago</h2>
+      <img class="img img-fluid object-cover object-center payment-methods-image w-75"
+        src="/web/image/483163/product-view__payment-methods.png" />
+    </div>
+  </div>
+
+  <script><![CDATA[
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            var updateContentWidth = function() {
+                var activeSlide = document.querySelector('.owl-carousel .owl-item.active img');
+                var customContent = document.querySelector('.camiicode-custom-content');
+                
+                if (activeSlide && customContent) {
+                    var activeWidth = activeSlide.offsetWidth;
+                    customContent.style.width = (activeWidth + 6) + 'px';
+                    customContent.style.margin = '0 5px 0 auto';
+                    
+                    var paymentImage = document.querySelector('.payment-methods-image');
+                    if (paymentImage) {
+                        paymentImage.style.maxWidth = '100%';
+                        paymentImage.style.height = 'auto';
+                    }
+                }
+            };
+
+            updateContentWidth();
+            
+            var resizeObserver = new ResizeObserver(updateContentWidth);
+            var carousel = document.querySelector('.owl-carousel');
+            if (carousel) {
+                resizeObserver.observe(carousel);
+            }
+            
+            if (typeof jQuery !== 'undefined' && jQuery.fn.owlCarousel) {
+                jQuery('.owl-carousel').on('changed.owl.carousel', updateContentWidth);
+            }
+        }, 1000);
+    });
+  ]]></script>
+</xpath>

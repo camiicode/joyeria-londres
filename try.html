@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <title>Hola Mundo</title>
+</head>
+
+<body>
+  <a href="#" id="whatsappButton">Compartir</a>
+
+  <script>
+    // Selecciona el botón por su id
+    const whatsappButton = document.getElementById('whatsappButton');
+
+    // Añade un event listener para el evento 'click'
+    whatsappButton.addEventListener('click', () => {
+      // Obtiene la URL de la página actual
+      const pageUrl = window.location.href;
+
+      // Codifica la URL para que sea segura en una URL de WhatsApp
+      const encodedUrl = encodeURIComponent(pageUrl);
+
+      // Construye el enlace de WhatsApp con el mensaje
+      const whatsappLink = `https://wa.me/?text=${encodedUrl}`;
+
+      // Abre el enlace en una nueva ventana/pestaña
+      window.open(whatsappLink, '_blank');
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<xpath expr="//section[@id='product_detail']" position="after">
+  <section id="camiicode-our-guarantees" class="camiicode-our-guarantees ccog">
+    <div class="ccog-container container">
+      <div class="ccog-row row">
+        <div class="ccog-content col-md-6 ml-3 mx-md-auto offset-md-3">
+          <h2>Nuestras Garantias</h2>
+          <div class="ccog-content__dialog row">
+
+            <div class="ccog-content__dialog--item col-md-auto col-6">
+              <button role="link"
+                onclick="document.getElementById('jl-lifetime-maintenance').showModal()">
+                <div class="ccog-content__dialog--item-img">
+                  <svg width="40" height="41" viewBox="0 0 40 41" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M18.2599 0.579103C18.4903 0.578746 18.7147 0.651001 18.9 0.785199C19.0853 0.919398 19.2217 1.10843 19.2889 1.32438L23.4307 14.6573L35.8153 19.0932C36.0195 19.1665 36.1962 19.2988 36.322 19.4727C36.4478 19.6466 36.5167 19.8538 36.5198 20.0669C36.5228 20.28 36.4597 20.4891 36.3389 20.6663C36.2181 20.8435 36.0452 20.9806 35.8432 21.0595L23.5403 25.8491L19.2889 39.8283C19.2227 40.0453 19.0867 40.2355 18.9014 40.3708C18.716 40.5061 18.491 40.5791 18.2599 40.5791C18.0288 40.5791 17.8039 40.5061 17.6185 40.3708C17.4331 40.2355 17.2972 40.0453 17.2309 39.8283L12.9796 25.8491L0.67669 21.0595C0.474632 20.9806 0.301764 20.8435 0.180952 20.6663C0.0601405 20.4891 -0.00292284 20.28 0.000104074 20.0669C0.00313099 19.8538 0.0721055 19.6466 0.197904 19.4727C0.323703 19.2988 0.500398 19.1665 0.704617 19.0932L13.0891 14.6573L17.2331 1.32438C17.3002 1.10877 17.4363 0.919992 17.6211 0.785826C17.806 0.65166 18.0299 0.579197 18.2599 0.579103ZM18.2599 5.24446L14.9882 15.771C14.9397 15.927 14.8549 16.0698 14.7404 16.1882C14.626 16.3065 14.485 16.3972 14.3287 16.4531L4.08808 20.1248L14.2578 24.0827C14.4085 24.1417 14.5436 24.2333 14.6529 24.3507C14.7623 24.4681 14.8432 24.6082 14.8894 24.7606L18.2621 35.843L21.6305 24.7606C21.6767 24.6082 21.7575 24.4681 21.8669 24.3507C21.9763 24.2333 22.1114 24.1417 22.2621 24.0827L32.4318 20.1248L22.1912 16.4573C22.0349 16.4015 21.8939 16.3108 21.7795 16.1924C21.665 16.074 21.5802 15.9312 21.5317 15.7752L18.2599 5.24446Z"
+                      fill="black" />
+                    <path
+                      d="M34.9087 39.7799C34.6939 39.7799 34.5005 39.6115 34.479 39.4009C34.0924 35.5693 33.7916 34.3482 30.2041 34.0114C29.9893 33.9903 29.8174 33.8008 29.8174 33.5903C29.8174 33.3798 29.9893 33.1903 30.2041 33.1692C33.8776 32.8324 34.0924 31.9061 34.479 28.0744C34.479 27.8639 34.6939 27.6954 34.9087 27.6954C35.1235 27.6954 35.3169 27.8639 35.3383 28.0744C35.725 31.9061 35.9613 32.8324 39.6133 33.1692C39.8281 33.1903 40 33.3798 40 33.5903C40 33.8008 39.8281 33.9903 39.6133 34.0114C36.0043 34.3482 35.725 35.5693 35.3383 39.422C35.3383 39.6325 35.145 39.8009 34.9087 39.8009V39.7799Z"
+                      fill="black" />
+                  </svg>
+                </div>
+                <p>Mantenimiento de Por Vida</p>
+              </button>
+              <dialog id="jl-lifetime-maintenance">
+                <form method="dialog">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-6">
+                      <path fill-rule="evenodd"
+                        d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </form>
+                <h3>Titulo de la Ventana</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, omnis!
+                  Accusantium, eius,
+                  architecto aperiam qui eligendi modi similique labore ad, molestias iste quo. Aut
+                  maxime, commodi fugiat
+                  distinctio atque id.</p>
+              </dialog>
+            </div>
+            <div class="ccog-content__dialog--item col-md-auto col-6">
+              <button role="link"
+                onclick="document.getElementById('jl-free-shipping').showModal()">
+                <div class="ccog-content__dialog--item-img">
+                  <svg width="55" height="41" viewBox="0 0 55 41" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M52.9375 7.84315L27.7608 0.614868C27.632 0.578814 27.4972 0.569894 27.3649 0.58867L2.44181 4.1659C1.76523 4.26616 1.14684 4.60674 0.698832 5.12586C0.250825 5.64498 0.00288645 6.30823 0 6.99529V34.1746C0.00288645 34.8616 0.250825 35.5249 0.698832 36.044C1.14684 36.5631 1.76523 36.9037 2.44181 37.004L27.3649 40.5764C27.4098 40.58 27.455 40.58 27.5 40.5764C27.5881 40.5764 27.6759 40.5644 27.7608 40.5407L52.9375 33.3267C53.5303 33.1564 54.0519 32.7972 54.4239 32.3032C54.7959 31.8092 54.9981 31.2072 55 30.5878V10.582C54.9981 9.96264 54.7959 9.36063 54.4239 8.86665C54.0519 8.37268 53.5303 8.01348 52.9375 7.84315ZM19.9138 19.6323H15.1724V4.26354L26.5517 2.62974V38.5401L15.1724 36.9063V21.5376H19.9138C20.1653 21.5376 20.4065 21.4372 20.5843 21.2586C20.7622 21.0799 20.8621 20.8376 20.8621 20.5849C20.8621 20.3323 20.7622 20.09 20.5843 19.9113C20.4065 19.7326 20.1653 19.6323 19.9138 19.6323ZM1.89655 34.1746V6.99529C1.89421 6.76448 1.97536 6.54066 2.12492 6.36544C2.27448 6.19022 2.48228 6.07551 2.7097 6.04263L13.2759 4.53505V19.6323H8.53448C8.28298 19.6323 8.04179 19.7326 7.86395 19.9113C7.68611 20.09 7.58621 20.3323 7.58621 20.5849C7.58621 20.8376 7.68611 21.0799 7.86395 21.2586C8.04179 21.4372 8.28298 21.5376 8.53448 21.5376H13.2759V36.6348L2.7097 35.113C2.48471 35.0804 2.27884 34.9678 2.12959 34.7955C1.98034 34.6233 1.89764 34.4029 1.89655 34.1746ZM53.1034 30.5878C53.1032 30.7946 53.0359 30.9956 52.9119 31.1606C52.7879 31.3256 52.6138 31.4455 52.4159 31.5024L28.4483 38.3758V2.79407L52.4159 9.67463C52.6126 9.73115 52.7859 9.85004 52.9098 10.0136C53.0337 10.1771 53.1016 10.3765 53.1034 10.582V30.5878Z"
+                      fill="black" />
+                  </svg>
+                </div>
+                <p>Envios <br /> Gratis</p>
+              </button>
+              <dialog id="jl-free-shipping">
+                <form method="dialog">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-6">
+                      <path fill-rule="evenodd"
+                        d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </form>
+                <h3>Titulo de la Ventana</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, omnis!
+                  Accusantium, eius,
+                  architecto aperiam qui eligendi modi similique labore ad, molestias iste quo. Aut
+                  maxime, commodi fugiat
+                  distinctio atque id.</p>
+              </dialog>
+            </div>
+            <div class="ccog-content__dialog--item col-md-auto col-6">
+              <button role="link"
+                onclick="document.getElementById('jl-product-guaranted').showModal()">
+                <div class="ccog-content__dialog--item-img">
+                  <svg width="57" height="43" viewBox="0 0 57 43" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M40.8371 35.4253H16.1629M40.8371 35.4253C43.0184 35.4253 45.1104 36.0736 46.6528 37.2277C48.1952 38.3817 49.0618 39.947 49.0618 41.5791H7.93824C7.93824 39.947 8.80477 38.3817 10.3472 37.2277C11.8896 36.0736 13.9816 35.4253 16.1629 35.4253M40.8371 35.4253V28.5022C40.8371 27.2283 39.458 26.1945 37.7528 26.1945H35.3649M16.1629 35.4253V28.5022C16.1629 27.2283 17.5447 26.1945 19.2472 26.1945H21.6379M35.3649 26.1945H21.6379M35.3649 26.1945C33.825 24.2046 32.9048 21.9806 32.6727 19.6878M21.6379 26.1945C23.1767 24.2045 24.096 21.9804 24.3273 19.6878M32.6727 19.6878C35.436 19.2107 38.0123 18.263 40.2065 16.9186M32.6727 19.6878C29.9269 20.1617 27.0731 20.1617 24.3273 19.6878M24.3273 19.6878C21.5649 19.2104 18.9869 18.2627 16.7935 16.9186M9.99441 5.65295C7.30219 5.94628 4.63739 6.3032 2 6.71961C2.61136 9.40431 4.39497 11.8616 7.07175 13.7071C9.74852 15.5525 13.1674 16.6819 16.7935 16.9186M9.99441 5.65295V6.19449C9.99441 10.5186 12.6428 14.3791 16.7935 16.9186M9.99441 5.65295V2.54526C16.0423 1.90731 22.2218 1.5791 28.5 1.5791C34.7809 1.5791 40.9604 1.90731 47.0056 2.5432V5.65295M47.0056 5.65295V6.19449C47.0056 10.5186 44.3572 14.3791 40.2065 16.9186M47.0056 5.65295C49.6849 5.94465 52.3511 6.30038 55 6.71961C54.3888 9.40399 52.6056 11.8611 49.9293 13.7065C47.2531 15.5519 43.8321 16.6815 40.2065 16.9186"
+                      stroke="black" stroke-width="2.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <p>Productos Garantizados</p>
+              </button>
+              <dialog id="jl-product-guaranted">
+                <form method="dialog">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-6">
+                      <path fill-rule="evenodd"
+                        d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </form>
+                <h3>Titulo de la Ventana</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, omnis!
+                  Accusantium, eius,
+                  architecto aperiam qui eligendi modi similique labore ad, molestias iste quo. Aut
+                  maxime, commodi fugiat
+                  distinctio atque id.</p>
+              </dialog>
+            </div>
+            <div class="ccog-content__dialog--item col-md-auto col-6">
+              <button role="link"
+                onclick="document.getElementById('jl-pickup-store').showModal()">
+                <div class="ccog-content__dialog--item-img">
+                  <svg width="45" height="43" viewBox="0 0 45 43" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M25.8053 41.5791V24.9124C25.8053 24.4704 25.9796 24.0465 26.2897 23.7339C26.5999 23.4214 27.0206 23.2458 27.4593 23.2458H34.0754C34.5141 23.2458 34.9348 23.4214 35.245 23.7339C35.5552 24.0465 35.7295 24.4704 35.7295 24.9124V41.5791M25.8053 41.5791H1.23746M25.8053 41.5791H35.7295M35.7295 41.5791H43.757M40.6915 41.5791V15.688M40.6915 15.688C39.3685 16.4571 37.8222 16.7414 36.3149 16.4927C34.8075 16.244 33.4319 15.4777 32.4214 14.3235C31.2085 15.7058 29.4353 16.5791 27.4593 16.5791C26.5204 16.58 25.5922 16.3791 24.7365 15.9898C23.8808 15.6004 23.1174 15.0316 22.4972 14.3213C21.2843 15.7058 19.5112 16.5791 17.5351 16.5791C16.5963 16.58 15.668 16.3791 14.8123 15.9898C13.9566 15.6004 13.1932 15.0316 12.5731 14.3213C11.5628 15.4758 10.1874 16.2426 8.68002 16.4917C7.17266 16.7408 5.62619 16.4568 4.30292 15.688M40.6915 15.688C41.5706 15.1767 42.3211 14.4684 42.885 13.618C43.4489 12.7676 43.8111 11.7979 43.9435 10.7839C44.0759 9.76986 43.975 8.73875 43.6485 7.77032C43.3221 6.8019 42.779 5.92213 42.0611 5.1991L39.4367 2.55688C38.8169 1.93158 37.9761 1.57988 37.099 1.5791H7.89327C7.01653 1.57929 6.17572 1.93017 5.55557 2.55466L2.93339 5.1991C2.21716 5.92296 1.67547 6.80289 1.35008 7.77104C1.02469 8.73919 0.924282 9.76971 1.05661 10.7831C1.18893 11.7966 1.55045 12.7658 2.11329 13.6162C2.67613 14.4666 3.42526 15.1754 4.30292 15.688M4.30292 41.5791V15.688M10.919 34.9124H19.1892C19.6279 34.9124 20.0486 34.7368 20.3588 34.4243C20.6689 34.1117 20.8432 33.6878 20.8432 33.2458V24.9124C20.8432 24.4704 20.6689 24.0465 20.3588 23.7339C20.0486 23.4214 19.6279 23.2458 19.1892 23.2458H10.919C10.4804 23.2458 10.0597 23.4214 9.74946 23.7339C9.43927 24.0465 9.26501 24.4704 9.26501 24.9124V33.2458C9.26501 34.1658 10.006 34.9124 10.919 34.9124Z"
+                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <p>Recoger <br /> en Tienda</p>
+              </button>
+              <dialog id="jl-pickup-store">
+                <form method="dialog">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-6">
+                      <path fill-rule="evenodd"
+                        d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </form>
+                <h3>Cambios y Devoluciones</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, omnis!
+                  Accusantium, eius,
+                  architecto aperiam qui eligendi modi similique labore ad, molestias iste quo. Aut
+                  maxime, commodi fugiat
+                  distinctio atque id.</p>
+              </dialog>
+            </div>
+            <div class="ccog-content__dialog--item col-md-auto col-6">
+              <button role="link"
+                onclick="document.getElementById('jl-changes-returns').showModal()">
+                <div class="ccog-content__dialog--item-img">
+                  <svg width="42" height="43" viewBox="0 0 42 43" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M32.0496 38.2394C35.9513 35.6546 38.8226 31.782 40.1629 27.2966C41.5031 22.8113 41.2274 17.9976 39.3837 13.6947C37.54 9.39188 34.2453 5.87275 30.0739 3.75077C25.9025 1.6288 21.119 1.03857 16.5572 2.08298M32.0496 38.2394V30.4648M32.0496 38.2394H39.8724M9.89573 4.95515C6.00743 7.54944 3.15107 11.425 1.82335 15.9079C0.495628 20.3908 0.78054 25.1974 2.62854 29.4919C4.47654 33.7864 7.77073 37.2972 11.9382 39.4136C16.1058 41.53 20.883 42.1183 25.4392 41.0761M9.89573 4.95515V12.6942M9.89573 4.95515H2.12401"
+                      stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <p>Cambios y Devoluciones</p>
+              </button>
+              <dialog id="jl-changes-returns">
+                <form method="dialog">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-6">
+                      <path fill-rule="evenodd"
+                        d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </form>
+                <h3>Titulo de la Ventana</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, omnis!
+                  Accusantium, eius,
+                  architecto aperiam qui eligendi modi similique labore ad, molestias iste quo. Aut
+                  maxime, commodi fugiat
+                  distinctio atque id.</p>
+              </dialog>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</xpath>

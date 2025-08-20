@@ -1,0 +1,307 @@
+#wrap {
+  .te_product_media {
+
+    .jl-product-view__newProductPrice {
+      font-size: 2rem;
+      font-weight: 800 !important;
+      color: var(--jl-secondary-color);
+    }
+
+    .jl-product-view__specifications {
+      h6 {
+        font-weight: 800 !important;
+        color: var(--jl-primary-color);
+        text-transform: uppercase;
+      }
+    }
+
+    #mainSlider {
+
+      .owl {
+
+        &-nav {
+          display: none;
+        }
+
+        &-item.active {
+          border: 2px solid var(--jl-primary-color);
+          padding: .1rem;
+          margin-top: 5px;
+
+          img {
+            width: 100% !important;
+            max-width: 100% !important;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+
+  .oe_website_sale h1[itemprop="name"] {
+    color: var(--jl-primary-color);
+  }
+
+  #product_details {
+    form {
+      .js_product.js_main_product {
+
+        .product_price.mt16,
+        .product_price.mt16 h4,
+        .product_price.mt16 h4 .oe_price,
+        .te_s_variant_text,
+        .te_s_hr_line,
+        .te_p_sku,
+        .js_categ_div.te_prod_bottom_margin {
+          visibility: hidden;
+          opacity: 0;
+          height: 0 !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          display: none !important;
+        }
+
+        ul.list-unstyled.js_add_cart_variants.flex-column {
+          padding-left: 0 !important;
+
+          li h6 {
+            font-weight: 800 !important;
+            text-transform: uppercase;
+            color: var(--jl-primary-color);
+            padding: 10px 0;
+          }
+        }
+
+        .css_quantity.input-group.oe_website_spinner.te_product_quantity.te_prod_bottom_margin {
+          margin: 4px 4px 15px 0px !important;
+
+          .input-group-prepend,
+          .input-group-append {
+            margin: 0 !important;
+
+            a {
+              border-radius: 0;
+              background-color: var(--jl-primary-color);
+              color: var(--jl-tertiary-color);
+              height: 46px !important;
+              width: 46px !important;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+
+        a#add_to_cart {
+          background-color: var(--jl-secondary-color);
+          border: 1px solid var(--jl-secondary-color);
+          color: var(--jl-tertiary-color);
+          font-weight: 800 !important;
+        }
+      }
+    }
+  }
+
+  .te_s_shipping_info {
+    display: none;
+  }
+
+  section.product_tabs_ept.s_tabs {
+    #te_product_tabs {
+      border-bottom: none;
+    }
+
+    ul {
+      li {
+        display: none;
+
+        &:first-child {
+          display: block;
+          cursor: unset;
+          background-color: transparent !important;
+        }
+
+        a {
+          cursor: unset;
+          color: var(--jl-secondary-color);
+          font-weight: 800;
+          border-bottom: none;
+          background-color: transparent !important;
+
+          &::after {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  .availability_messages .text-success {
+    color: #444 !important;
+    background-color: #f3f3f3;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-style: italic;
+  }
+
+  .camiicode-product-view__carousel {
+    ~.camiicode-custom-content {
+      display: block;
+      clear: both;
+      position: relative;
+      z-index: 1;
+      padding-top: 40px;
+      padding-bottom: 20px;
+
+      .camiicode-custom-content__img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+        border: 2px solid var(--jl-primary-color);
+        position: relative;
+        width: 100%;
+
+        h2 {
+          margin-top: -3rem;
+          margin-bottom: 1rem;
+          font-size: 1rem;
+          background-color: var(--jl-tertiary-color);
+          padding: 5px 30px;
+        }
+      }
+    }
+  }
+
+  #camiicode-our-guarantees {
+    .ccog {
+      &-content {
+        border: 2px solid var(--jl-primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2 {
+          font-size: 1rem;
+          line-height: .75rem;
+          background-color: var(--jl-tertiary-color);
+          padding: 5px 30px;
+          margin-top: -.75rem;
+          margin-bottom: 1rem;
+          text-align: center;
+          color: var(--jl-primary-color);
+          width: auto;
+          display: inline-block;
+        }
+
+        &__dialog {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          padding: 0 0 1.5rem 0;
+
+          &--item {
+            width: calc(100% / 5);
+
+            &-img svg {
+              margin: auto;
+              padding-block: 10px;
+            }
+
+            button {
+              width: 100%;
+              text-align: center;
+              position: relative;
+
+              &:hover {
+                svg path {
+                  fill: var(--jl-primary-color);
+                }
+
+                p {
+                  color: var(--jl-primary-color);
+                }
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-image: url(https://joyerialondres.com/web/image/483302/our-guaranteess__info-label.png);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                background-attachment: unset;
+                width: 15px;
+                height: 15px;
+              }
+
+              p {
+                font-size: 1rem;
+                line-height: 1rem;
+              }
+            }
+
+            dialog {
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: auto;
+              max-width: 30%;
+              border-radius: 0px;
+              padding: 2rem;
+
+              form {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                cursor: pointer;
+              }
+
+              h3 {
+                text-align: center;
+              }
+
+              p,
+              i {
+                font-size: 1rem;
+                line-height: 1rem;
+                padding: .5rem 0;
+              }
+
+              &::backdrop {
+                background-color: rgba(0, 0, 0, .5);
+              }
+
+              button::before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &:has(dialog[open]) {
+    overflow: hidden;
+  }
+
+  .alternative_product_main,
+  .accessory_product_main {
+    width: 100% !important;
+  }
+
+  .owl-carousel .owl-item {
+    max-width: calc(100% / 4) !important;
+  }
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
