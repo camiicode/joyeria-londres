@@ -377,6 +377,111 @@
     }
   });
 </script>
+<script>
+  (function () {
+    // Config
+    const BREAKPOINT = 1024;     // >= 1024 => Desktop
+    const ITEMS_DESKTOP = 4;     // 4 en desktop
+    const ITEMS_MOBILE = 1;      // 1 en mobile
+
+    // Selecciona los carouseles que quieres manipular
+    const CAROUSEL_SELECTORS = [
+      '#myCarousel_alt_prod .owl-carousel',
+      '#myCarousel_acce_prod .owl-carousel',
+      '#myCarousel_recent_prod .owl-carousel'
+    ];
+
+    // Utilitario: debounce
+    function debounce(fn, delay) {
+      let t;
+      return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...args), delay);
+      };
+    }
+
+    function getMarginRightPx(el) {
+      const cs = window.getComputedStyle(el);
+      const mr = parseFloat(cs.marginRight || '0');
+      return isNaN(mr) ? 0 : mr;
+    }
+
+    function adjustCarousel(root) {
+      const stageOuter = root.querySelector('.owl-stage-outer') || root;
+      const stage = root.querySelector('.owl-stage');
+      if (!stage) return;
+
+      const items = Array.from(stage.children).filter(n => n.classList && n.classList.contains('owl-item'));
+      if (!items.length) return;
+
+      const visibleWidth = stageOuter.clientWidth || root.clientWidth || root.offsetWidth;
+      const perView = (window.innerWidth >= BREAKPOINT) ? ITEMS_DESKTOP : ITEMS_MOBILE;
+      const margin = getMarginRightPx(items[0]);
+
+      // Ancho de cada item: restamos los márgenes entre items visibles
+      const itemWidth = Math.max(1, Math.floor((visibleWidth - margin * (perView - 1)) / perView));
+
+      // Aplicar width con !important
+      items.forEach(it => {
+        it.style.setProperty('width', itemWidth + 'px', 'important');
+      });
+
+      // Ajustar ancho del stage para que haga scroll correcto
+      const stageWidth = (items.length * itemWidth) + (items.length * margin);
+      stage.style.setProperty('width', stageWidth + 'px', 'important');
+    }
+
+    function adjustAll() {
+      CAROUSEL_SELECTORS.forEach(sel => {
+        document.querySelectorAll(sel).forEach(adjustCarousel);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Intentos iniciales (Odoo y Owl pintan “tarde”)
+      adjustAll();
+      window.addEventListener('load', () => {
+        adjustAll();
+        setTimeout(adjustAll, 120);   // tras primer layout de Owl
+        setTimeout(adjustAll, 500);   // por si hay lazyload
+        setTimeout(adjustAll, 1200);  // por si hay otro repaint
+      });
+
+      // Recalcular en resize
+      window.addEventListener('resize', debounce(adjustAll, 150));
+
+      // Observar cambios del DOM para re-aplicar (Owl/Odoo reinyectan estilos)
+      const mo = new MutationObserver(debounce((mutations) => {
+        let touched = false;
+        for (const m of mutations) {
+          if (m.type === 'childList') {
+            // Si aparece/ cambia un owl-carousel/stage/item
+            if ([...m.addedNodes].some(n =>
+              n.nodeType === 1 &&
+              n.classList &&
+              (n.classList.contains('owl-carousel') ||
+                n.classList.contains('owl-stage') ||
+                n.classList.contains('owl-item'))
+            )) { touched = true; break; }
+          } else if (m.type === 'attributes') {
+            const t = m.target;
+            if (t.classList && (t.classList.contains('owl-stage') || t.classList.contains('owl-item'))) {
+              touched = true; break;
+            }
+          }
+        }
+        if (touched) adjustAll();
+      }, 60));
+
+      mo.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['style', 'class']
+      });
+    });
+  })();
+</script>
 </body>
 
 </html>
