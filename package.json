@@ -11,7 +11,7 @@
   "dependencies": {
     "@fontsource/playfair-display": "^5.2.5",
     "@tailwindcss/vite": "^4.1.7",
-    "astro": "^5.8.0",
+    "astro": "^5.15.9",
     "sass": "^1.89.0",
     "tailwindcss": "^4.1.7",
     "vanilla-tilt": "^1.8.1"
